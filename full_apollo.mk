@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
 
 # apns config file
 PRODUCT_COPY_FILES += \
-        vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+        vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # HAL libs and other system binaries
 PRODUCT_PACKAGES += \
