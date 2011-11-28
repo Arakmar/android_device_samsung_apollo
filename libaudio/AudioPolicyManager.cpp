@@ -20,7 +20,7 @@
 #include "AudioPolicyManager.h"
 #include <media/mediarecorder.h>
 
-namespace android {
+namespace android_audio_legacy {
 
 
 
@@ -74,4 +74,4 @@ status_t AudioPolicyManager::startInput(audio_io_handle_t input)
     return status;
 }
 
-}; // namespace android
+}; // namespace android_audio_legacy

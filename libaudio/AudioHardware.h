@@ -32,7 +32,7 @@ extern "C" {
     struct mixer_ctl;
 };
 
-namespace android {
+namespace android_audio_legacy {
 
 // TODO: determine actual audio DSP and hardware latency
 // Additionnal latency introduced by audio DSP and hardware in ms
@@ -360,6 +360,6 @@ private:
 
 };
 
-}; // namespace android
+}; // namespace android_audio_legacy
 
 #endif
