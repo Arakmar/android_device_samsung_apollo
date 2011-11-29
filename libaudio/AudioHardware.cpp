@@ -87,7 +87,7 @@ enum {
 #define TRACE_DRIVER_OUT
 #endif
 
-#define HAVE_FM_RADIO 1
+//#define HAVE_FM_RADIO 1
 
 // ----------------------------------------------------------------------------
 

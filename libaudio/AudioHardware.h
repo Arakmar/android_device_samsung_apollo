@@ -33,6 +33,8 @@ extern "C" {
 };
 
 namespace android_audio_legacy {
+	
+	using namespace android;
 
 // TODO: determine actual audio DSP and hardware latency
 // Additionnal latency introduced by audio DSP and hardware in ms
@@ -332,6 +334,9 @@ private:
         // BufferProvider
         virtual status_t getNextBuffer(BufferProvider::Buffer* buffer);
         virtual void releaseBuffer(BufferProvider::Buffer* buffer);
+		
+		virtual status_t addAudioEffect(effect_handle_t effect) { return INVALID_OPERATION; }
+		virtual status_t removeAudioEffect(effect_handle_t effect) { return INVALID_OPERATION; }
 
         void lock() { mLock.lock(); }
         void unlock() { mLock.unlock(); }
