@@ -115,3 +115,6 @@ int device_perform_action(int which) {
 int device_wipe_data() {
     return 0;
 }
+
+void device_ui_init(UIParameters* ui_parameters) {
+}
