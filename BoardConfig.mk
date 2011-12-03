@@ -116,10 +116,13 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Wifi
 WPA_SUPPLICANT_VERSION      := VER_0_5_X
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-BOARD_WLAN_DEVICE 	    := bcm4329
-WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
+BOARD_WLAN_DEVICE           := bcm4329
+WIFI_EXT_MODULE_PATH     := "/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4329_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4329_aps.bin"
+WIFI_EXT_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_EXT_MODULE_NAME     := "dhd"
+WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_MODULE_NAME     := "dhd"
 #BOARD_SOFTAP_DEVICE         := "eth0"
@@ -165,3 +168,4 @@ TARGET_NO_KERNEL := true
 BOARD_LDPI_RECOVERY := true
 
 BOARD_USE_LEGACY_TOUCHSCREEN := true
+BOARD_USES_GENERIC_AUDIO := false
