@@ -21,7 +21,7 @@
 #define LOG_NDEBUG 1
 
 #include <hardware/sensors.h>
-#include <hardware/sensors_deprecated.h>
+#include "sensors_deprecated.h"
 #include <fcntl.h>
 #include <errno.h>
 #include <dirent.h>

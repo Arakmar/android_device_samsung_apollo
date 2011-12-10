@@ -117,11 +117,8 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 WPA_SUPPLICANT_VERSION      := VER_0_5_X
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 BOARD_WLAN_DEVICE           := bcm4329
-WIFI_EXT_MODULE_PATH     := "/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4329_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4329_aps.bin"
-WIFI_EXT_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
-WIFI_EXT_MODULE_NAME     := "dhd"
 WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_MODULE_NAME     := "dhd"
@@ -133,12 +130,17 @@ BOARD_HAS_NO_RECOVERY_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
+
+# Releasetools
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/apollo/releasetools/apollo_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/apollo/releasetools/apollo_img_from_target_files
+
 # Recovery
 BOARD_USES_BOOTMENU := false
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_PROVIDES_BOOTMODE := true
 BOARD_USES_BML_OVER_MTD := false
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apollo/recovery/recovery_ui.c
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apollo/recovery/recovery_ui.c
 BOARD_BOOT_DEVICE := /dev/block/bml5
 BOARD_DATA_DEVICE := /dev/block/stl7
 BOARD_DATA_FILESYSTEM := ext4

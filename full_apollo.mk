@@ -58,6 +58,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.GT-I5800 \
     sensors.GT-I5800 \
+    audio.primary.GT-I5800 \
+    audio_policy.GT-I5800 \
     brcm_patchram_plus \
     screencap \
     dexpreopt \
